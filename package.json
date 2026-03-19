@@ -1,0 +1,29 @@
+{
+  "name": "learn_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pat10504/Learn_node-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Pat10504/Learn_node-JS/issues"
+  },
+  "homepage": "https://github.com/Pat10504/Learn_node-JS#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "uuid": "^13.0.0"
+  }
+}
