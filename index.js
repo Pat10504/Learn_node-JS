@@ -1,7 +1,14 @@
-const {format} = require('date-fns');
-const {v4: uuid} = require('uuid'); 
+const express = require('express');
+const app = express();
+const path = require('path');
+const PORT = process.env.PORT || 3000;
 
-console.log(format(new Date(), 'yyy:mm:dd <-----> HH:mm:ss'));
-console.log(uuid());
+app.get('/', (req, res) => {
+    //res.sendFile('./views/index.html', { root: __dirname });
+    console.log(req.host, req.url, req.method);
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+})
 
-console.log('pat');
+app.listen(PORT, () => {
+    console.log(`Server Running On Port: ${PORT}`);
+});
