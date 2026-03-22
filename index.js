@@ -4,6 +4,12 @@ const { format } = require('date-fns');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
+app.use((req, res, next) => {
+    console.log(req.url);
+    next();
+});
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get(['/', '/index', '/index.html'], (req, res) => {
     //res.sendFile('./views/index.html', { root: __dirname });
     console.log(req.host, req.url, req.method);
